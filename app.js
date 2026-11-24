@@ -402,6 +402,9 @@ function render() {
     root.appendChild(group('المصادر والحقوق', null, [sources]));
 
     root.appendChild(h('p', { 'class': 'closing', text: 'صفحة مجانية للعائلات، أُعدت في نوفمبر ٢٠٢٦. النص القرآني مجاني دائمًا، ومفيش حاجة بتتبعت ولا بتتنشر من هنا.' }));
+    const packLine = h('p', { 'class': 'closing pack-link', html: 'ولو حابين متابعة ورقية للحفظ، في حزمة طباعة منزلية اختيارية تكمل الصفحة — والصفحة دي بتفضل مجانية كاملة: ' });
+    packLine.appendChild(link('https://omarelmany.gumroad.com/l/juz-amma-pack', 'حزمة رفيق جزء عمّ للطباعة'));
+    root.appendChild(packLine);
 
     document.getElementById('app').appendChild(root);
     renderView();
